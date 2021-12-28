@@ -2,6 +2,16 @@ BanklessDAO DevOps Documentation Demo
 =====================================
 This is the repository containing a demo of a deployment mechanism for a BanklessDAO documentation site for DevOps.
 
+TODO (IN ORDER)
+---------------
+
+1. Initial infrastructure via Terraform
+   1. Route53 control of DNS is needed
+2. Initial documentation filled out in code
+3. Initial demo deployment via `draft` branch gated behind basic auth
+4. Acceptance of initial draft
+5. Deployment
+
 The Hosting Environment
 ------------
 The static site is stored in an S3 bucket on AWS. It is then served via CloudFront over a domain using Route 53 and ACM for SSL.
@@ -35,5 +45,7 @@ since those deploy to live sites for testing and production.
 
 Known Issues
 ------------
-1. Hot linking of images could cost money so if that becomes a problem then AWS WAF should be considered.
-2. [This template](https://jekyllthemes.io/theme/desk-responsive-knowledge-base-and-faq-jekyll-theme) looks nicer IMHO
+1. Route53 is not configured for `bankless.community`
+2. Terraform has not deployed infrastructure for this repo yet
+3. Hot linking of images could cost money so if that becomes a problem then AWS WAF should be considered.
+4. [This template](https://jekyllthemes.io/theme/desk-responsive-knowledge-base-and-faq-jekyll-theme) looks nicer IMHO
