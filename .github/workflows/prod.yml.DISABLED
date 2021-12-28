@@ -1,0 +1,41 @@
+name: 'Deploy to Production site'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  prod-deploy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      - name: Install bundle command
+        run: gem install bundler
+      - name: Install ruby dependencies
+        run: cd SourceCode && bundle install
+      - name: Copy robots.txt in to place
+        run: cp ./BuildAdditions/robots.txt ./SourceCode/
+      - name: Move the PRODUCTION _config.yml in to place
+        run: mv ./BuildAdditions/prod_config.yml ./SourceCode/_config.yml
+      - name: Build the site via Jekyll
+        run: cd SourceCode && bundle exec jekyll build
+      - name: Deploy AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Sync site to S3
+        run: aws s3 sync ./SourceCode/_site/ s3://devops.bankless.community/ --delete
+      - name: Set CloudFront COMMIT_HASH variable
+        run: sed -i "s/COMMIT_HASH/${GITHUB_SHA}/g" ./BuildAdditions/CloudFront-Invalidate.json
+      - name: Set PRODUCTION CloudFront CLOUDFRONT_ID variable
+        run: sed -i "s/CLOUDFRONT_ID/TODO/g" ./BuildAdditions/CloudFront-Invalidate.json
+      - name: Clear CloudFront Cache
+        run: aws cloudfront create-invalidation --cli-input-json file://./BuildAdditions/CloudFront-Invalidate.json
