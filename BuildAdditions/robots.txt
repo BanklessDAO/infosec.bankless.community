@@ -1,4 +1,0 @@
-User-Agent: ia_archiver
-Disallow: /
-
-Sitemap: https://devops.bankless.community/sitemap.xml

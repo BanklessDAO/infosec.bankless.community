@@ -1,0 +1,12 @@
+{
+  "name": "bankless",
+  "version": "2.0.1",
+  "license": "UNLICENSED",
+  "author": "stackthat.eth",
+  "scripts": {
+    "dev": "cd ../../; hugo server || hugo server",
+    "test": "cd ../../; hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --verbose --verboseLog --buildDrafts --buildExpired --buildFuture --watch --forceSyncStatic -e production --minify|| hugo server --themesDir ../.. --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --verbose --verboseLog --buildDrafts --buildExpired --buildFuture --watch --forceSyncStatic -e production --minify",
+    "build": "cd ../../; hugo || hugo --gc --minify --templateMetrics --templateMetricsHints --verbose --verboseLog --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
+    "update": "hugo mod clean && hugo mod get -u ./... && hugo mod tidy"
+  }
+}

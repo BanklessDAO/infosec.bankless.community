@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+<!-- banner -->
+{{ with .Params.banner }}
+<section class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-center">
+        <h1 class="mb-4 pb-2">{{ .title | markdownify }}</h1>
+        <p class="mb-4">{{ .content | markdownify }}</p>
+        <div class="mb-5">
+          {{ if .button.enable }}
+          {{ with .button }}
+          <a href="{{ .link | safeURL }}" title="{{ .label }}" class="btn btn-outline-primary m-2">{{ .label }}</a>
+          {{ end }}
+          {{ end }}
+        </div>
+        {{ partial "image" (dict "Src" .image "Alt" "banner image" "Size" "750x") }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- /banner -->
+
+<!-- important_information -->
+<section class="section">
+  <div class="container">
+      <div class="row justify-content-center">
+          {{range .Params.important_information}}
+          <div class="col-lg-10 mx-auto">
+              <div class="faq-content mb-5 p-5 is-hoverable shadow border rounded-2">
+                  <h5 class="mb-2">{{.title | markdownify}}</h5>
+                  <p class="fw-500">{{.source | markdownify}}</p>
+                  <p><span>{{.content | truncate 500}}</p>
+
+                  {{ if .link }} <a href="{{ .link }}" class="btn-link">{{i18n `read_more`}} <i class="fas fa-arrow-right"></i></a> {{ end }}
+              </div>
+          </div>
+      {{end}}
+      </div>
+  </div>
+</section>
+<!-- /important_information -->
+
+{{ end }}

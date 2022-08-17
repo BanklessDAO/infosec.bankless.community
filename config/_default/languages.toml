@@ -1,0 +1,11 @@
+################################### English language #####################################
+[en]
+languageName = "EN"
+languageCode = "en-US"
+contentDir = "content/english"
+weight = 1
+########### footer content ##########
+footer_menu_left = "Security"
+footer_menu_middle = "About"
+footer_menu_right = ""
+footer_content = "Helping the world go Bankless"
