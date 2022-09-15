@@ -179,10 +179,10 @@ weight = 2
 # weight = 30
 
 # footer menu left
-[[footer_left]]
-name = "FAQ"
-url = "about/"
-weight = 1
+# [[footer_left]]
+# name = "FAQ"
+# url = "about/"
+# weight = 1
 
 [[footer_left]]
 name = "News"
