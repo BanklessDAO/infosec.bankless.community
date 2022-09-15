@@ -86,17 +86,17 @@ button = "I Accept"
 [[social]]
 title = "twitter"
 icon = "fab fa-twitter"
-link = "https://twitter.com/BanklessHQ"
+link = "https://twitter.com/BanklessDAO"
 
 [[social]]
 title = "instagram"
 icon = "fab fa-instagram"
-link = "https://www.instagram.com/bankless/"
+link = "https://www.instagram.com/banklessDAO/"
 
 [[social]]
-title = "tiktok"
-icon = "fab fa-tiktok"
-link = "https://www.tiktok.com/@banklesshq"
+title = "snapshot"
+icon = "fas fa-bolt"
+link = "https://snapshot.org/#/banklessvault.eth"
 
 [[social]]
 title = "discord"
