@@ -2,8 +2,8 @@
 # favicon
 favicon = "images/favicon.png"
 # logo
-logo = "images/logo.svg"
-logo_dark = "images/logo.svg"
+logo = "images/logo.jpeg"
+logo_dark = "images/logo.jpeg"
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
 logo_width = "180px"
@@ -35,9 +35,9 @@ preloader = "" # use jpg, png, svg or gif format.
 
 # Navigation button
 [navigation_button]
-enable = false
-label = "Launch dApp"
-link = "dapp/"
+enable = true
+label = "Join BanklessDAO"
+link = "https://discord.gg/pKrEaYqaU2"
 
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
@@ -101,4 +101,4 @@ link = "https://snapshot.org/#/banklessvault.eth"
 [[social]]
 title = "discord"
 icon = "fab fa-discord"
-link = "https://discord.gg/YZYfDAEX"
+link = "https://discord.gg/pKrEaYqaU2"
