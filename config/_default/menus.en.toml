@@ -11,6 +11,11 @@ name = "Latest News"
 url = "news/"
 weight = 2
 
+[[main]]
+name = "Our Team"
+url = "team/"
+weight = 3
+
 # [[main]]
 # name = "Guides & Tutorials"
 # url = "guides/"
@@ -201,10 +206,10 @@ weight = 2
 
 
 # footer menu middle
-# [[footer_middle]]
-# name = "Team"
-# url = "team/"
-# weight = 1
+[[footer_middle]]
+name = "Our Team"
+url = "team/"
+weight = 1
 
 # [[footer_middle]]
 # name = "Help Desk"
