@@ -11,6 +11,73 @@ name = "Latest News"
 url = "news/"
 weight = 2
 
+[[main]]
+weight = 3
+name = "Services"
+hasChildren = true
+[main.params]
+isMenuLarge = true
+
+[[main]]
+parent = "Services"
+name = "Infrastructure"
+pre = "<i class='dropdown-icon fas fa-network-wired'></i>"
+post = "<small class='dropdown-subtitle'>Manged DAO Infrastructure</small>"
+url = "services/infrastructure/"
+weight = 1
+
+[[main]]
+parent = "Services"
+name = "Source Control"
+pre = "<i class='dropdown-icon fas fa-code'></i>"
+post = "<small class='dropdown-subtitle'>Managed DAO Source Control</small>"
+url = "services/source-control/"
+weight = 2
+
+[[main]]
+parent = "Services"
+name = "Communications"
+pre = "<i class='dropdown-icon fas fa-comments'></i>"
+post = "<small class='dropdown-subtitle'>Managed DAO Email & Identities</small>"
+url = "services/communications/"
+weight = 3
+
+[[main]]
+parent = "Services"
+name = "Discord"
+pre = "<i class='dropdown-icon fab fa-discord'></i>"
+post = "<small class='dropdown-subtitle'>Managed DAO Discord</small>"
+url = "services/discord/"
+weight = 4
+
+[[main]]
+parent = "Services"
+name = "Security"
+pre = "<i class='dropdown-icon fas fa-shield-cat'></i>"
+post = "<small class='dropdown-subtitle'>Managed DAO Assets</small>"
+url = "services/security/"
+weight = 5
+
+[[main]]
+parent = "Services"
+name = "Education"
+pre = "<i class='dropdown-icon fas fa-graduation-cap'></i>"
+post = "<small class='dropdown-subtitle'>Provide Education on Security</small>"
+url = "services/security-education/"
+weight = 6
+
+[[main]]
+parent = "Services"
+name = "View All Services"
+pre = "<i class='dropdown-icon text-primary fas fa-arrow-right'></i>"
+url = "services/"
+weight = 7
+
+[[main]]
+name = "Our Team"
+url = "team/"
+weight = 4
+
 # [[main]]
 # name = "Guides & Tutorials"
 # url = "guides/"
