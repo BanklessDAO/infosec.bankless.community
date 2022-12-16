@@ -38,7 +38,7 @@ team_members:
   - name: "tony.stark#5145"
     designation: "InfoSec Engineer"
     image: "images/avatar/tony-stark.jpg"
-    bio: "That Linux guy"
+    bio: "Founder, Solidity & Discord Bot Dev"
     social_profile:
       - name: "Twitter"
         icon: "fab fa-twitter"

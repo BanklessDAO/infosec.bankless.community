@@ -1,7 +1,7 @@
 ---
 ####################### Banner #########################
 banner:
-  title : "BanklessDAO - InfoSec Department"
+  title : "BanklessDAO - InfoSec Team"
   image : "images/banner-art.svg"
   content : "Here you'll find all the latest news, articles, videos, and resources about the latest security, privacy, hacks and scams happening in web3."
 
